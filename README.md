@@ -1,13 +1,12 @@
-# Online Course Management System CLI
+# 🎓 Online Course Management System CLI
 
 ## 📌 Project Description
 
-Online Course Management System CLI is a command-line based application developed using Python.
+Online Course Management System CLI is a command-line based application developed using Python.  
 The system helps manage students, teachers, courses, enrollments, and grades efficiently.
 
 This project uses:
-
-* Python
+* Python 3
 * JSON file storage
 * Object-Oriented Programming (OOP)
 * Role-Based Authentication System
@@ -17,22 +16,19 @@ This project uses:
 # 🚀 Features
 
 ## 👨‍💼 Admin
-
-* Manage students
-* Manage teachers
-* Manage courses
+* Manage students (CRUD)
+* Manage teachers (CRUD)
+* Manage courses (CRUD)
 * Manage enrollments
 * Manage grades
-* Register new users
+* Register and manage users
 
 ## 👨‍🏫 Teacher
-
 * View students
 * View courses
 * Add and manage grades
 
 ## 👨‍🎓 Student
-
 * View enrolled courses
 * View grades
 
@@ -40,17 +36,24 @@ This project uses:
 
 # 🔐 Authentication System
 
-The system includes:
-
 * Login system
 * Register system
-* Role-based access control
+* Role-based access control (RBAC)
 
-Roles:
+### Roles:
+* Admin → Full system access
+* Teacher → Manage grades + view data
+* Student → View only
 
-* Admin
-* Teacher
-* Student
+---
+
+# 👤 User Management (Admin Only)
+
+Admin can:
+* Register users
+* View users
+* Update users
+* Delete users
 
 ---
 
@@ -62,6 +65,7 @@ Roles:
 * Enrollment Management
 * Grade Management
 * Authentication System
+* User Management System
 
 ---
 
@@ -97,6 +101,7 @@ project/
 │   ├── teacher_service.py
 │   ├── course_service.py
 │   ├── grade_service.py
+│   ├── user_service.py
 │
 ├── utils/
 │   ├── helpers.py
@@ -106,7 +111,6 @@ project/
 │   └── data.json
 │
 └── README.md
-```
 
 ---
 
@@ -167,7 +171,7 @@ The system prevents:
 * Duplicate users
 * Duplicate enrollments
 * Duplicate grades
-* Invalid grade values
+* Invalid grade values (0–100 only)
 
 ---
 
@@ -178,7 +182,8 @@ This project demonstrates:
 * Python OOP
 * File Handling
 * CRUD Operations
-* Authentication Systems
+* Authentication System
+* Role-Based Access Control (RBAC)
 * Data Validation
 * CLI Application Development
 
